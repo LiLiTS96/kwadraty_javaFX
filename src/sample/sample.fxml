@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="612.0">
+         <children>
+            <Canvas height="200.0" layoutX="300.0" layoutY="200.0" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4c4c4c" height="500.0" stroke="BLACK" strokeType="INSIDE" width="612.0" />
+            <Circle fill="RED" layoutX="41.0" layoutY="41.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="BLUE" layoutX="41.0" layoutY="95.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="GREEN" layoutX="41.0" layoutY="149.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+            <RadioButton fx:id="radioRed" layoutX="79.0" layoutY="32.0" mnemonicParsing="false" selected="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="radioBlue" layoutX="79.0" layoutY="86.0" mnemonicParsing="false" toggleGroup="$group" />
+            <RadioButton fx:id="radioGreen" layoutX="79.0" layoutY="140.0" mnemonicParsing="false" toggleGroup="$group" />
+            <Button fx:id="buttonWstaw" layoutX="14.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#rysujKwadratButton" prefHeight="25.0" prefWidth="62.0" text="Wstaw" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="500.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+            <Canvas fx:id="canvas" height="500.0" layoutX="111.0" layoutY="1.0" onMousePressed="#rysujKwadrat" width="500.0" />
+            <Label layoutX="82.0" layoutY="219.0" text="X" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="252.0" text="Y" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboX" layoutX="13.0" layoutY="220.0" prefHeight="25.0" prefWidth="62.0" />
+            <ComboBox fx:id="comboY" layoutX="14.0" layoutY="253.0" prefHeight="25.0" prefWidth="62.0" />
+         </children></Pane>
+   </children>
+</GridPane>
